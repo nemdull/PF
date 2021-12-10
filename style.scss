@@ -29,6 +29,10 @@ body {
   z-index: 2;
   pointer-events: none;
   opacity: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 // 各セクション共通のスタイル(セクションタイトル、説明)
 .section {
