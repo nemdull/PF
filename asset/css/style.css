@@ -141,6 +141,10 @@ body {
   padding: 15px 0;
 }
 
+.career__text .sns {
+  width: 100%;
+}
+
 .career__text .sns h2 {
   text-align: center;
 }
