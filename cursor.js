@@ -1,4 +1,5 @@
-$(function(){
+if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+  $(function(){
 
   var cursor=$("#cursor");
 
@@ -12,5 +13,6 @@ $(function(){
       "top":y+"px",
       "left":x+"px"
     });
+    });
   });
-});
+}
