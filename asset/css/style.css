@@ -141,6 +141,20 @@ body {
   padding: 15px 0;
 }
 
+.career__text .sns h2 {
+  text-align: center;
+}
+
+.career__text .sns .snslink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.career__text .sns .snslink a {
+  margin: auto;
+}
+
 .photo__list {
   list-style-type: none;
   display: -webkit-box;

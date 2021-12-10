@@ -127,6 +127,20 @@ body {
         padding: 15px 0;
       }
     }
+
+    .sns {
+      h2 {
+        text-align: center;
+      }
+
+      .snslink {
+        display: flex;
+
+        a {
+          margin: auto;
+        }
+      }
+    }
   }
 }
 // photo
