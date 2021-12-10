@@ -1,0 +1,178 @@
+//　変数の定義
+$bg-footer: rgb(36, 43, 128);
+// メディアクエリの継承(@extendで継承)
+%section-padding {
+  padding: 100px 20%;
+
+  @media (max-width: 1280px) {
+    padding: 80px 10%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 80px 5%;
+  }
+}
+// サイト全体のフォント指定(Webfont使用)
+html,
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  cursor: none;
+}
+// カーソル
+#cursor {
+  position: fixed;
+  background: #000;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+}
+// 各セクション共通のスタイル(セクションタイトル、説明)
+.section {
+  &__title {
+    font-size: 48px;
+    text-align: center;
+
+    &--description {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+}
+// header
+.header {
+  &__inner {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2% 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.nav {
+  margin-left: auto;
+
+  &__list {
+    display: inline-block;
+    margin-right: 1vw;
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}
+// career
+.career {
+  @extend %section-padding;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__image {
+    width: 50%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    width: 50%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    p {
+      line-height: 2;
+      margin-left: 50px;
+      font-size: 18px;
+      font-weight: 500;
+
+      @media (max-width: 768px) {
+        margin: 20px 0 0;
+      }
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      margin-top: 30px;
+
+      caption {
+        font-weight: bold;
+      }
+
+      td {
+        text-align: center;
+        width: 25%;
+        padding: 15px 0;
+      }
+    }
+  }
+}
+// photo
+.photo {
+  @extend %section-padding;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: calc(50% - 10px);
+
+    &:not(:nth-child(-n + 2)) {
+      margin-top: 20px;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      transition: 0.5s;
+
+      &:hover {
+        opacity: 0.7;
+
+        img {
+          box-shadow: 0 0 15px rgba(35, 231, 17, 0.15);
+        }
+      }
+    }
+  }
+}
+// footer
+footer {
+  padding: 15px 0;
+  background: $bg-footer;
+  text-align: center;
+  color: #fff;
+
+  small {
+    font-size: 14px;
+    line-height: 1;
+  }
+}
