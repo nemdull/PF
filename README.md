@@ -1,14 +1,55 @@
-# Personal Portfolio Website (PF)
+# PF — Personal Portfolio Website
 
-This is a personal portfolio website showcasing career information, a photo gallery, and social media links. It features a custom cursor and responsive design.
+このリポジトリは、自己紹介・写真ギャラリー・SNSリンクを備えた個人ポートフォリオサイトを提供します。カスタムカーソルとレスポンシブデザインを特徴とします。
 
-## Technologies
+## 技術スタック
 
 - HTML
 - Sass (SCSS)
 - JavaScript (jQuery)
 - Font Awesome
 
-## How to View
+補足:
+- CSS は Sass/SCSS で管理され、最終的なスタイルは asset/css/style.css などに出力される想定です。
+- cursor.js によるカスタムカーソルの実装が中心的役割を担っています。
 
-To view the website, open the `index.html` file in your web browser.
+## 主な機能
+
+- 自己紹介・経歴セクション
+- 写真ギャラリー（asset/img 以下の画像を参照）
+- SNSリンク集
+- カスタムカーソルの UI
+- レスポンシブデザイン
+
+## 設計・実装の工夫
+
+- SCSS によるスタイル管理とモジュール分離
+- cursor.js を用いたカスタムカーソルによる UX 向上
+- 静的サイトとして最小構成で動作を確認可能
+- ファイル構成とディレクトリ設計を意識した整理
+
+## セットアップ & 動作確認
+
+- そのままブラウザで index.html を開く
+  - 例: open index.html
+- SCSS のビルド（任意）
+  - sass style.scss asset/css/style.css
+  - 以降、asset/css/style.css を参照してスタイル適用を確認
+- ローカルでの動作確認
+  - index.html をブラウザで開き、カスタムカーソル・レスポンシブ挙動を確認
+
+## 改善ポイント / TODO
+
+- 現状のリポジトリには未解決の TODO が確認できていません。今後、以下のカテゴリでの整理を想定しています。
+  - テスト: ユニットテスト・UIテストの追加検討
+  - ドキュメント: セットアップ手順の詳細化、貢献ガイドの追加
+  - CI/CD: 自動ビルド・デプロイの導入検討
+  - デザイン: アクセシビリティ向上、フォント・カラーの見直し
+  - パフォーマンス: 画像最適化、遅延読み込みの検討
+- TODO の実体をリポジトリから抽出して正確に反映するには、TODO コメント・GitLog・Issue/PR の確認が必要です。必要であれば実データを拾ってカテゴリ分けして追記します。
+
+## 強調したいポイント
+
+- 静的サイトとしてのシンプルさと、Sass/JavaScript/Font Awesome の組み合わせによる実装力
+- カスタムカーソルを含む UX エンジニアリングの実践
+- ファイル構成・ディレクトリ設計を意識したコード整理
